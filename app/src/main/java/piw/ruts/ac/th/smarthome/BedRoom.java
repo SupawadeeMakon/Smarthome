@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Map;
 
@@ -23,33 +24,46 @@ public class BedRoom extends AppCompatActivity {
 
     public FirebaseDatabase firebaseDatabase,databaseText;
     public DatabaseReference databaseReference_led1,datagetFirebase;
-    private static final String TAG ="LED Control";
-    public Button button_led;
-    public Integer value,value_refer;
     public TextView TxtMyData;
+    public Button button_led;
+
+    private static final String TAG ="LED Control";
+    public Integer value,value_refer;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bed_room);
-        firebaseDatabase=FirebaseDatabase.getInstance();
-        databaseReference_led1 =firebaseDatabase.getReference("Home/BedRoom/Led1");
+
+        firebaseDatabase=FirebaseDatabase.getInstance();//ติดต่อ Firebase
+        databaseReference_led1 =firebaseDatabase.getReference("Home/BedRoom/Led1");//part
+        // databaseReference_led1 =FirebaseDatabase.getInstance().getReference("Home/BedRoom/Led1");
 
         button_led=(Button) findViewById(R.id.BRLed1);
 
         databaseReference_led1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 value=dataSnapshot.getValue(Integer.class);
+
                 Log.d(TAG,"Value is :" + value);
+
                 if (value==1){
                     button_led.setText("LED1 ON");
                     value_refer=0;
+                    //button_led.setBackgroundColor(R.color.GREEN);
+                    button_led.setBackgroundColor(getResources().getColor(R.color.GREEN));
+                    Toast.makeText(getBaseContext(), "LED ON", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
                     button_led.setText("LED1 OFF");
                     value_refer=1;
+                    button_led.setBackgroundColor(getResources().getColor(R.color.RED));
+                    Toast.makeText(getBaseContext(), "LED OFF", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -75,12 +89,17 @@ public class BedRoom extends AppCompatActivity {
 
         //สร้างตัวรับข้อมูล Firebase
         databaseText = FirebaseDatabase.getInstance();
-        datagetFirebase = databaseText.getReference();
+        //datagetFirebase = databaseText.getReference();
+        datagetFirebase = FirebaseDatabase.getInstance().getReference("Students/User1");
+
+
+        //datagetFirebase = FirebaseDatabase.getInstance().getReference();
+
         datagetFirebase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {//เรียกข้อมูลที่เกิดการเปลี่ยนแปลงทุกครั้งของค่าข้อมูลใน Path ที่อ้างถึง
                 Map map = (Map)dataSnapshot.getValue() ; //ดึงค่าจาก Firebase
-                String data1 =String.valueOf(map.get("MyData")); //ดึงค่าที่อยู่ใน Path
+                String data1 =String.valueOf(map.get("name")); //ดึงค่าที่อยู่ใน Path
                 TxtMyData.setText(data1);//แสดงค่า
 
             }
