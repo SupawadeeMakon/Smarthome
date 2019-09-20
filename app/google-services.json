@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "932943212232",
+    "firebase_url": "https://testfirebase23-8-62.firebaseio.com",
+    "project_id": "testfirebase23-8-62",
+    "storage_bucket": "testfirebase23-8-62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932943212232:android:d16c0b88e427a0103f3ffd",
+        "android_client_info": {
+          "package_name": "piw.ruts.ac.th.firebasekotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932943212232-n9ub92387d1our6t4ccu7ro3ra3sbth0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPsz1BkYaESRS9wtL_dL0TG89GUBhiOBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932943212232-n9ub92387d1our6t4ccu7ro3ra3sbth0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932943212232:android:00874d6f6cf5bb973f3ffd",
+        "android_client_info": {
+          "package_name": "piw.ruts.ac.th.kotlinfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932943212232-b3bs4e2rqahqp2jj5nhn147v0d1lftdc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "piw.ruts.ac.th.kotlinfirebase",
+            "certificate_hash": "6eb7e760357de307a64dc9cce104e2d7b426d38a"
+          }
+        },
+        {
+          "client_id": "932943212232-n9ub92387d1our6t4ccu7ro3ra3sbth0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPsz1BkYaESRS9wtL_dL0TG89GUBhiOBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932943212232-n9ub92387d1our6t4ccu7ro3ra3sbth0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932943212232:android:27da1a2c1aa351aa3f3ffd",
+        "android_client_info": {
+          "package_name": "piw.ruts.ac.th.smarthome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932943212232-ug5n3culut31t5uckodqlhg4m8ct48fl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "piw.ruts.ac.th.smarthome",
+            "certificate_hash": "6eb7e760357de307a64dc9cce104e2d7b426d38a"
+          }
+        },
+        {
+          "client_id": "932943212232-n9ub92387d1our6t4ccu7ro3ra3sbth0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPsz1BkYaESRS9wtL_dL0TG89GUBhiOBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932943212232-n9ub92387d1our6t4ccu7ro3ra3sbth0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
